@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:3001
+
+### 邮箱登录
+POST {{baseUrl}}/user2/login
+Content-Type: application/json
+
+{
+  "email": "{{$dotenv EMAIL}}",
+  "code": "663111"
+}
+
+### 获取验证码
+{{baseUrl}}/email/code
+
