@@ -7,7 +7,7 @@ import { RedisService } from 'src/redis/redis.service';
 export class EmailService {
   transporter: Transporter;
   constructor(private configService: ConfigService) {
-    console.log(this.configService.get('email_user'), 123);
+    // 配置发送者邮箱
     this.transporter = createTransport({
       host: 'smtp.qq.com',
       port: 587,
